@@ -1,17 +1,17 @@
 import { ACTIONS } from "../App"
 
-export default function DigitButton({dispatch,digit})
+export default function DigitButton(props)
 {
-   
+    // {dispatch,digit}
     return (
         <button
             onClick={()=>
                 {   
-                    dispatch({type : ACTIONS.ADD_DIGIT, payload : digit})  
+                    props.dispatch({type : ACTIONS.ADD_DIGIT, payload : props.digit})  
                 }
             }
         >
-        {digit}
+        {props.digit}
         </button>
     )
 }

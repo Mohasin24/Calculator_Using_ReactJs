@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import "./app.css";
 import DigitButton from "./component/DigitButton";
 import OperationButton from "./component/OperationButton";
-import { type } from "@testing-library/user-event/dist/type";
+
 
 export const ACTIONS = {
   ADD_DIGIT : "add-digit",
