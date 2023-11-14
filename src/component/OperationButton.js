@@ -1,14 +1,16 @@
 import { ACTIONS } from "../App"
 
-export default function OperationButton({dispatch,operation}) 
+export default function OperationButton({dispatch,perform})
 {
-    return (
+    return(
         <button
-            onClick={()=>{
-                dispatch({type : ACTIONS.CHOOSER_OPERATION, payload: operation})
-            }}
+            onClick={()=>
+                {   
+                    dispatch({type : ACTIONS.CHOOSE_OPERATION, payload : {perform}})  
+                }
+            }
         >
-            {operation}
+        {perform} 
         </button>
     )
 }
